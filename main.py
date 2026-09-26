@@ -60,3 +60,16 @@ Consumer
 @app.get("/admin", response_class=HTMLResponse)
 def admin(request: Request):
     return templates.TemplateResponse("admin.html", {"request": request})
+@app.get("/login", response_class=HTMLResponse)
+async def login_page(request: Request):
+    return templates.TemplateResponse(
+        "login.html",
+        {"request": request}
+    )
+
+@app.get("/signup", response_class=HTMLResponse)
+async def signup_page(request: Request):
+    return templates.TemplateResponse(
+        "signup.html",
+        {"request": request}
+    )
