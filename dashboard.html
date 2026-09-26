@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">Member dashboard</div><h2>Your Credit Snapshot</h2>
+<div class="grid">
+<div class="card"><div class="muted">ISA Progress™</div><div class="metric">{{isa_progress}}%</div><div class="progress"><i style="width:{{isa_progress}}%"></i></div></div>
+<div class="card"><div class="muted">Funding Readiness™</div><div class="metric">{{funding_readiness}}%</div><div class="progress"><i style="width:{{funding_readiness}}%"></i></div></div>
+<div class="card"><div class="muted">Utilization</div><div class="metric">{{utilization}}%</div><p class="muted">Demo data</p></div>
+</div>
+<div class="grid">
+<div class="card"><h3>Action Plan</h3><p><b>{{tasks_done}} of {{tasks_total}}</b> demo tasks complete.</p><p>• Review revolving balances<br>• Verify payment status<br>• Check inaccurate accounts</p></div>
+<div class="card"><h3>What-If</h3><p>Model how changes to balances or completed tasks could affect your planning metrics.</p></div>
+<div class="card"><h3>Funding Vault</h3><p>Organize documents and preparation milestones for future funding applications.</p></div>
+</div>
+<div class="notice">This build uses demonstration data. It does not pull consumer reports or provide a credit score.</div>
+{% endblock %}

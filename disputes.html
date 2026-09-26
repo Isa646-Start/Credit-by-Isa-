@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block content %}
+<div class="eyebrow">Dispute Center</div><h2>Create a personalized dispute draft</h2>
+<p class="lead">Select the bureau/account and describe the issue using your own facts. Review every statement before sending.</p>
+<form method="post" action="/disputes/preview" class="card">
+<label>Credit bureau</label><select name="bureau"><option>Experian</option><option>Equifax</option><option>TransUnion</option></select>
+<label>Creditor / Furnisher</label><input name="creditor" required placeholder="Account or company name">
+<label>What is inaccurate?</label><input name="issue" required placeholder="Example: balance is incorrect">
+<label>Your facts</label><textarea name="facts" required placeholder="Describe what happened and what your records show."></textarea>
+<button class="btn" type="submit">Generate draft</button>
+</form>
+<div class="notice">The planned $3 submission/postage workflow is not charging real money in this MVP. Payment and mailing providers must be connected before launch.</div>
+{% endblock %}

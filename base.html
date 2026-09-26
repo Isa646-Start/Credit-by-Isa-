@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Credit by Isa</title>
+<style>
+:root{--ink:#17130f;--cream:#f7f1e8;--gold:#b79252;--brown:#5d4331;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:var(--ink)}
+nav{background:var(--ink);color:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:21px}.brand span{color:#d8b778}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+main{max-width:1120px;margin:auto;padding:42px 22px}.hero{padding:64px 0 38px}.eyebrow{color:var(--brown);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+h1{font-size:52px;line-height:1.02;margin:12px 0 18px;max-width:800px} h2{font-size:30px}
+.lead{font-size:19px;line-height:1.6;max-width:760px;color:#5d554d}
+.btn{display:inline-block;background:var(--ink);color:white;padding:14px 20px;border-radius:10px;text-decoration:none;border:0;font-weight:700;cursor:pointer}
+.btn.alt{background:var(--gold);color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+.card{background:white;border:1px solid #e7dccd;border-radius:16px;padding:22px;box-shadow:0 5px 20px #3b2b1e10}
+.metric{font-size:38px;font-weight:800}.muted{color:#71685f}.progress{height:10px;background:#eee4d6;border-radius:99px;overflow:hidden;margin-top:12px}
+.progress i{display:block;height:100%;background:var(--gold)}
+label{display:block;font-weight:700;margin:15px 0 6px} input,select,textarea{width:100%;padding:12px;border:1px solid #cabba8;border-radius:9px;background:white}
+textarea{min-height:130px}.notice{background:#fff7df;border:1px solid #ead29b;padding:14px;border-radius:10px;margin:18px 0}
+pre{white-space:pre-wrap;background:white;padding:22px;border-radius:14px;border:1px solid #e3d7c8;line-height:1.5}
+@media(max-width:760px){h1{font-size:38px}.grid{grid-template-columns:1fr}nav a{margin:0 10px 0 0}}
+</style>
+</head>
+<body>
+<nav><div class="brand">Credit <span>by Isa</span></div><div>
+<a href="/">Home</a><a href="/dashboard">Dashboard</a><a href="/disputes">Dispute Center</a><a href="/admin">Admin</a>
+</div></nav>
+<main>{% block content %}{% endblock %}</main>
+</body></html>
