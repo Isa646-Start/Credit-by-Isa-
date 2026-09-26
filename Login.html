@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card" style="max-width:520px; margin:40px auto;">
+  <div class="eyebrow">MEMBER ACCESS</div>
+  <h2>Welcome back</h2>
+  <p class="muted">Log in to your Credit by Isa account.</p>
+
+  <form method="post" action="/login">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="you@example.com" required>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter your password" required>
+
+    <button type="submit">Log In</button>
+  </form>
+
+  <p class="muted" style="margin-top:20px;">
+    Don't have an account?
+    <a href="/signup">Create your account</a>
+  </p>
+</div>
+
+{% endblock %}
