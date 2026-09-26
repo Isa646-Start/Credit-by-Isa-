@@ -2,68 +2,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="eyebrow">ADMIN CENTER</div>
-<h2>Credit by Isa — Administration</h2>
-<p class="muted">Manage members, disputes, memberships and platform activity.</p>
+<div class="card" style="max-width:520px; margin:40px auto;">
+  <div class="eyebrow">CREATE YOUR ACCOUNT</div>
+  <h2>Join Credit by Isa</h2>
+  <p class="muted">Create your account to start your credit journey.</p>
 
-<h2>Platform Overview</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Total Members</h3>
-    <div class="metric">0</div>
-    <p class="muted">Registered users</p>
-  </div>
+  <form method="post" action="/signup">
 
-  <div class="card">
-    <h3>Active Members</h3>
-    <div class="metric">0</div>
-    <p class="muted">Current memberships</p>
-  </div>
+    <label>Full Name</label>
+    <input type="text" name="full_name"
+           placeholder="Your full name" required>
 
-  <div class="card">
-    <h3>Open Disputes</h3>
-    <div class="metric">0</div>
-    <p class="muted">Disputes requiring attention</p>
-  </div>
-</div>
+    <label>Email</label>
+    <input type="email" name="email"
+           placeholder="you@example.com" required>
 
-<h2>Membership Plans</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Free</h3>
-    <div class="metric">$0</div>
-    <p>Credit education and basic planning tools.</p>
-  </div>
+    <label>Password</label>
+    <input type="password" name="password"
+           placeholder="Create a password" required>
 
-  <div class="card">
-    <h3>Credit+</h3>
-    <div class="metric">$29.99</div>
-    <p>Monthly membership.</p>
-  </div>
+    <label>Confirm Password</label>
+    <input type="password" name="confirm_password"
+           placeholder="Confirm your password" required>
 
-  <div class="card">
-    <h3>Business</h3>
-    <div class="metric">$59.99</div>
-    <p>Monthly membership with business credit tools.</p>
-  </div>
-</div>
+    <button type="submit">Create Account</button>
 
-<h2>Management</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Members</h3>
-    <p>View and manage customer accounts and membership status.</p>
-  </div>
+  </form>
 
-  <div class="card">
-    <h3>Dispute Center</h3>
-    <p>Review customer dispute activity and generated letters.</p>
-  </div>
-
-  <div class="card">
-    <h3>Audit Log</h3>
-    <p>Track important administrative and platform activity.</p>
-  </div>
+  <p class="muted" style="margin-top:20px;">
+    Already have an account?
+    <a href="/login">Log in</a>
+  </p>
 </div>
 
 {% endblock %}
