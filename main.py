@@ -150,3 +150,24 @@ async def signup(
             "user_id": new_user.id
         }
 
+@app.post("/login")
+async def login(
+    email: str = Form(...),
+    password: str = Form(...)
+):
+    email = email.strip().lower()
+
+    with SessionLocal() as db:
+        user = db.query(User).filter(User.email == email).first()
+
+        if not user:
+            return {"error": "Invalid email or password."}
+
+        if not password_hasher.verify(password, user.password_hash):
+            return {"error": "Invalid email or password."}
+
+        return RedirectResponse(
+            url="/dashboard",
+            status_code=303
+        )
+
